@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.form');
-});
+// Route::get('/', function () {
+//     return view('velcome');
+// });
+
+// Страница отправки формы
+Route::match(['GET','POST'], '/', [\App\Http\Controllers\InformController::class, 'inform'])->name('inform');

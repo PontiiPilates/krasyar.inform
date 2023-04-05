@@ -12,7 +12,7 @@
 <body>
 
     <div class="container">
-        <h1>Hello, world!</h1>
+        @include('components.header')
     </div>
 
     <div class="container">
