@@ -44,6 +44,7 @@ class TaskManagerService
     public function createNewTask($template, $description)
     {
         $template['Name'] = $description;
+        // $template['Name'] = null;
 
         $headers = self::createHeaders();
         $path = config('inform.path') . 'api/task';

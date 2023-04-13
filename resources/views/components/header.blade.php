@@ -1,25 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+<a class="navbar-brand" href="{{ route('inform') }}">Проинформировать</a>
 
-    <div class="container-fluid">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-        <a class="navbar-brand" href="{{ route('inform') }}">Проинформировать</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">О сервисе</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-</nav>
+<div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link {{-- active --}}" aria-current="page" href="#">Справка</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Контакты</a>
+        </li>
+    </ul>
+</div>

@@ -16,27 +16,32 @@ class InformController extends Controller
             $uid = $request->ip(); // безопасность: ограничить множественную отправку формы с одного айпи
 
             $rules = [
-                'name' => 'min:3',
-                'message' => 'required|min:3',
+                'name' => 'required|min:10',
+                'message' => 'required|min:30',
             ];
 
             $messages = [
-                'message.required' => 'Поле обязательно для заполнения'
+                'name.required' => 'Обязательно длля заполнения',
+                'name.min' => 'Не может быть короче :min символов',
+                'message.required' => 'Обязательно для заполнения',
+                'message.min' => 'Не может быть короче :min символов',
             ];
 
             $validated = $request->validate($rules, $messages);
 
             $template = $task_manager->getTaskTemplate(591, 1297);
+            // dump($template);
 
             $description = $request->message;
 
             $create_new_task = $task_manager->createNewTask($template, $description);
+            // dump($create_new_task);
 
             if (isset($create_new_task['Task'])) {
-                dd('Success');
+                $request->session()->now('message', ['type' => 'success', 'text' => 'Заявка успешно отправлена.']);
             }
             if (isset($create_new_task['Message'])) {
-                dd('Error');
+                $request->session()->now('message', ['type' => 'danger', 'text' => 'Не удалось создать заявку. Попробуйте позже или сообщите о проблеме.']);
             }
         }
 
