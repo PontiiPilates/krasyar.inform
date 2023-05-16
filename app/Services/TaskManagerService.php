@@ -37,6 +37,7 @@ class TaskManagerService
         ];
 
         $response = Http::withHeaders($headers)->get($path, $parameters);
+        // dd($response->json());
 
         return $response->json()['Task'];
     }
@@ -44,7 +45,14 @@ class TaskManagerService
     public function createNewTask($template, $description)
     {
         $template['Name'] = $description;
-        // $template['Name'] = null;
+
+        // Попытка создания заявки от имени администратора
+        // $template['UserEmail'] = 'servicedesk@krasyar.ru';
+        // $template['UserPassword'] = 'managerkbkbv';
+        // $template['UserConfirmPassword'] = 'managerkbkbv';
+        // $template['UserCompanyId'] = 30;
+        // $template['UserRoleId'] = 37;
+        // $template['CreatorId'] = 43;
 
         $headers = self::createHeaders();
         $path = config('inform.path') . 'api/task';

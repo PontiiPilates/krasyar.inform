@@ -5,11 +5,11 @@
 
     @include('components.head')
 
-    <title>App Name - @yield('title')</title>
+    <title>@yield('title')</title>
 
 </head>
 
-<body data-bs-theme="dark">
+<body data-bs-theme="light">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
         <div class="container">
