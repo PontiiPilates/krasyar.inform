@@ -15,7 +15,12 @@
         @include('elements.select_department_krasyar')
         @include('elements.select_department_discounter')
         @include('elements.enter_message')
-        @include('elements.send_button')
+        {{-- @include('elements.send_button') --}}
+
+        <div class="col-12 mt-5">
+            <button type="submit" class="btn btn-info w-100 d-md-none">Отправить</button>
+            <button type="submit" class="btn btn-info d-none d-md-block">Отправить</button>
+        </div>
 
     </form>
 

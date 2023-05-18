@@ -9,9 +9,9 @@
 
 </head>
 
-<body data-bs-theme="light">
+<body data-bs-theme="dark">
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary mb-5" data-bs-theme="dark">
         <div class="container">
             @include('components.header')
         </div>

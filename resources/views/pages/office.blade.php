@@ -13,7 +13,12 @@
 
         @include('elements.select_theme_message_office')
         @include('elements.enter_message')
-        @include('elements.send_button')
+        {{-- @include('elements.send_button') --}}
+
+        <div class="col-12 mt-5">
+            <button type="submit" class="btn btn-success w-100 d-md-none">Отправить</button>
+            <button type="submit" class="btn btn-success d-none d-md-block">Отправить</button>
+        </div>
 
     </form>
 

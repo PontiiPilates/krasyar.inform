@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?inform\.krasyar\.ru$ [NC]
+RewriteCond %{REQUEST_URI} !^/public/.* [NC]
+RewriteRule (.*) /public/$1 [L]
