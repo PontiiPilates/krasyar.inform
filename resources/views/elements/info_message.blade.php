@@ -3,11 +3,11 @@
         <div class="toast-header">
             @if (session('message.type') == 'success')
                 <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:" style="width: 16px; height: 16px; fill: #75b798;">
-                    <use xlink:href="#check-circle-fill" />
+                    <use xlink:href="#check-circle-fill"/>
                 </svg>
             @elseif(session('message.type') == 'danger')
                 <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:" style="width: 16px; height: 16px; fill: #ea868f;">
-                    <use xlink:href="#exclamation-triangle-fill" />
+                    <use xlink:href="#exclamation-triangle-fill"/>
                 </svg>
             @endif
             <strong class="me-auto">

@@ -8,7 +8,7 @@
 
     <h1 class="mb-5">Пожелания по улучшению условий труда</h1>
 
-    <form class="row g-3 mb-5" action="{{ route('improve') }}" method="POST">
+    <form class="row g-3 mb-5" action="{{ route('improveSend') }}" method="POST">
         @csrf
 
         @include('elements.select_structure')
@@ -18,5 +18,7 @@
         @include('elements.send_button')
 
     </form>
+
+    @include('scripts.fields_blocker')
 
 @endsection

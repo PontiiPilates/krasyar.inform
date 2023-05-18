@@ -8,7 +8,7 @@
 
     <h1 class="mb-5">Сообщение о нарушении в Красном Яре</h1>
 
-    <form class="row g-3 mb-5" action="{{ route('krasyar') }}" method="POST">
+    <form class="row g-3 mb-5" action="{{ route('krasyarSend') }}" method="POST">
         @csrf
 
         @include('elements.select_department_krasyar')

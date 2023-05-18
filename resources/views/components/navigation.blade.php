@@ -6,7 +6,7 @@
         </a>
     </div>
     <div class="col-md-3 col-6 upper-button">
-        <a href="{{ route('baget') }}" type="button" class="btn btn-warning text-start h-100 big-buttons">
+        <a href="{{ route('discounter') }}" type="button" class="btn btn-warning text-start h-100 big-buttons">
             <h5>Батон</h5>
             <p>Сообщить о нарушении сотрудником батона</p>
         </a>

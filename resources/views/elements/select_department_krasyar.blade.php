@@ -3,7 +3,7 @@
     <label for="krasyar_list" class="form-label"><small>Выберете код подразделения</small></label>
     <select name="krasyar_list" class="form-select @error('krasyar_list') is-invalid @enderror" id="krasyar_list" required>
         @foreach ($krasyar_list as $k => $v)
-            <option value="{{ $k }}">{{ $v }}</option>
+            <option value="{{ $v }}">{{ $v }}</option>
         @endforeach
     </select>
     @error('krasyar_list')

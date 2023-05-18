@@ -4,7 +4,7 @@
     <select name="structure" class="form-select @error('structure') is-invalid @enderror" id="structure" required>
         <option selected value="office">Центральный офис</option>
         <option value="krasyar">Красный Яр</option>
-        <option value="baget">Батон</option>
+        <option value="discounter">Батон</option>
     </select>
     @error('structure')
         <div class="invalid-feedback">{{ $message }}</div>

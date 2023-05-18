@@ -8,7 +8,7 @@
 
     <h1 class="mb-5">Сообщение о нарушении в Батоне</h1>
 
-    <form class="row g-3 mb-5" action="{{ route('baget') }}" method="POST">
+    <form class="row g-3 mb-5" action="{{ route('discounterSend') }}" method="POST">
         @csrf
 
         @include('elements.select_department_discounter')

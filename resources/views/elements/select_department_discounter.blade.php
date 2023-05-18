@@ -1,12 +1,12 @@
 {{-- Выбор подразделения Дискаунтера --}}
 <div class="col-md-12">
-    <label for="discounter" class="form-label"><small>Выберете код подразделения</small></label>
-    <select name="discounter" class="form-select @error('discounter') is-invalid @enderror" id="discounter" required>
+    <label for="discounter_list" class="form-label"><small>Выберете код подразделения</small></label>
+    <select name="discounter_list" class="form-select @error('discounter_list') is-invalid @enderror" id="discounter_list" required>
         @foreach ($discounter_list as $k => $v)
-            <option value="{{ $k }}">{{ $v }}</option>
+            <option value="{{ $v }}">{{ $v }}</option>
         @endforeach
     </select>
-    @error('discounter')
+    @error('discounter_list')
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
 </div>

@@ -13,26 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('velcome');
-// });
+Route::get('/', [\App\Http\Controllers\GeneralController::class, 'index'])->name('index');
 
-// Страница отправки формы
-Route::match(['GET','POST'], '/', [\App\Http\Controllers\InformController::class, 'inform'])->name('index');
+Route::get('/krasyar', [\App\Http\Controllers\GeneralController::class, 'krasyar'])->name('krasyar');
+Route::post('/krasyar', [\App\Http\Controllers\GeneralController::class, 'krasyarSend'])->name('krasyarSend');
 
-Route::get('/', [\App\Http\Controllers\InformController::class, 'index'])->name('index');
-Route::post('/', [\App\Http\Controllers\InformController::class, 'indexSend'])->name('indexSend');
+Route::get('/discounter', [\App\Http\Controllers\GeneralController::class, 'discounter'])->name('discounter');
+Route::post('/discounter', [\App\Http\Controllers\GeneralController::class, 'discounterSend'])->name('discounterSend');
 
-Route::get('/krasyar', [\App\Http\Controllers\InformController::class, 'krasyar'])->name('krasyar');
-Route::post('/krasyar', [\App\Http\Controllers\InformController::class, 'krasyarSend'])->name('krasyarSend');
+Route::get('/office', [\App\Http\Controllers\GeneralController::class, 'office'])->name('office');
+Route::post('/office', [\App\Http\Controllers\GeneralController::class, 'officeSend'])->name('officeSend');
 
-Route::get('/baget', [\App\Http\Controllers\InformController::class, 'baget'])->name('baget');
-Route::post('/baget', [\App\Http\Controllers\InformController::class, 'bagetSend'])->name('bagetSend');
+Route::get('/improve', [\App\Http\Controllers\GeneralController::class, 'improve'])->name('improve');
+Route::post('/improve', [\App\Http\Controllers\GeneralController::class, 'improveSend'])->name('improveSend');
 
-Route::get('/office', [\App\Http\Controllers\InformController::class, 'office'])->name('office');
-Route::post('/office', [\App\Http\Controllers\InformController::class, 'officeSend'])->name('officeSend');
-
-Route::get('/improve', [\App\Http\Controllers\InformController::class, 'improve'])->name('improve');
-Route::post('/improve', [\App\Http\Controllers\InformController::class, 'improveSend'])->name('improveSend');
-
-// TODO: переписать имена всех методов главного контроллера для гет и пост.
+// TODO: Маршрутизировать и валидировать данные
+// TODO: Проверить валидацию для офиса и условий труда
