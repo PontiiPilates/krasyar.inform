@@ -5,7 +5,7 @@
 @section('content')
 
     <h1>Сообщение о нарушении</h1>
-    <p>Отправляется анонимно</p>
+    <p><i class="bi bi-robot text-danger"> Отправляется анонимно</i></p>
 
     <div class="card mt-5 mb-5">
         <div class="card-body">

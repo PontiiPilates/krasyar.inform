@@ -1,6 +1,6 @@
-<a class="navbar-brand" href="{{ route('index') }}">
+<a class="navbar-brand" href="{{ route('index') }}" style="color: white;">
     <img src="/public/favicon.svg" alt="Bootstrap" width="30" height="24">
-    Проинформировать
+    <b>Проинформировать</b>
 </a>
 
 {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> --}}
